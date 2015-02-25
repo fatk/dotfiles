@@ -309,6 +309,10 @@ echo ""
 echo "Disable annoying backswipe in Chrome"
 defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
+echo ""
+echo "Use AirDrop over every interface. srsly this should be a default."
+defaults write com.apple.NetworkBrowser BrowseAllInterfaces 1
+
 ###############################################################################
 # Kill affected applications
 ###############################################################################
