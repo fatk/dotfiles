@@ -37,6 +37,9 @@ brew install ${binaries[@]}
 echo "Installing cask..."
 brew install caskroom/cask/brew-cask
 
+echo "Tapping into caskroom/versions"
+brew tap caskroom/versions
+
 # Apps
 apps=(
   dropbox
