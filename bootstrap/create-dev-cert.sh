@@ -6,7 +6,7 @@ chmod o-rwx $(brew --prefix)/etc/nginx/ssl
 
 openssl req \
   -new \
-  -newkey rsa:2048 \
+  -newkey sha512:2048 \
   -days 3650 \
   -nodes \
   -x509 \
