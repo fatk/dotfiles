@@ -56,24 +56,17 @@ apps=(
   qlprettypatch
   sublime-text3
   atom
-  flux
   airmail-beta
   qlstephen
-  sketch
   vlc
   mplayerx
   quicklook-json
   skype
   transmission
-  plug
   evernote
   the-unarchiver
-  torbrowser
-  trim-enabler
-  vyprvpn
   xtrafinder
   imageoptim
-  macs-fan-control
 )
 
 # Install apps to /Applications
@@ -81,13 +74,3 @@ apps=(
 echo "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
-# NPM packages
-packages=(
-  pageres
-  tmi
-  peerflix
-  gulp
-  grunt-cli
-)
-echo "installing npm packages..."
-npm install -g ${packages[@]}
