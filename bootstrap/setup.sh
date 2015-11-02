@@ -44,29 +44,25 @@ brew tap caskroom/versions
 apps=(
   dropbox
   google-chrome
-  qlcolorcode
   screenflick
-  slack
-  appcleaner
   firefox
-  qlmarkdown
   spotify
   flash
   iterm2
-  qlprettypatch
   sublime-text3
   atom
-  airmail-beta
   qlstephen
   vlc
   mplayerx
-  quicklook-json
   skype
   transmission
   evernote
   the-unarchiver
-  xtrafinder
   imageoptim
+  qlprettypatch
+  qlcolorcode
+  qlmarkdown
+  quicklook-json
 )
 
 # Install apps to /Applications
