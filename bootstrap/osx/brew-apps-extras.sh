@@ -2,7 +2,7 @@
 
 # Check for homebrew
 if test ! $(which brew); then
-  echo "Installing homebrew..."
+  echo -n "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -21,6 +21,8 @@ brew tap homebrew/homebrew-php
 echo -n "Installing PHP"
 brew install php70
 
+echo -n "Installing Curl with SSH and HTTP2 support."
+brew install curl --with-libssh2 --with-nghttp2 --with-openssl
 
 echo -n "Installing cask..."
 brew install caskroom/cask/brew-cask
@@ -36,6 +38,7 @@ apps=(
   torbrowser
   vyprvpn
   macs-fan-control
+  github-desktop
 )
 
 # Install apps to /Applications

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+
+# This scripts redirects local 80 port to 8080 and 443 to 8443
+
 sudo -v
 
 sudo bash -c 'export TAB=$'"'"'\t'"'"'

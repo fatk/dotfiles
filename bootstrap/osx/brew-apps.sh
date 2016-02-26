@@ -2,7 +2,7 @@
 
 # Check for homebrew
 if test ! $(which brew); then
-  echo "Installing homebrew..."
+  echo -n "Installing homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -13,8 +13,12 @@ brew update
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
 brew install coreutils findutils
 
+echo -n "Tapping into homebrew/versions"
+brew tap homebrew/versions
+
 # Install Bash 4
 brew install bash
+brew install bash-completion2
 
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
@@ -28,13 +32,13 @@ binaries=(
   grc
 )
 
-echo "Installing binaries..."
+echo -n "Installing binaries..."
 brew install ${binaries[@]}
 
-echo "Installing cask..."
+echo -n "Installing cask..."
 brew install caskroom/cask/brew-cask
 
-echo "Tapping into caskroom/versions"
+echo -n "Tapping into caskroom/versions"
 brew tap caskroom/versions
 
 # Apps
@@ -63,6 +67,6 @@ apps=(
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
-echo "installing apps..."
+echo -n "installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
