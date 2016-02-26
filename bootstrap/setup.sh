@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Check for homebrew
 if test ! $(which brew); then
   echo "Installing homebrew..."
@@ -8,10 +10,8 @@ fi
 brew update
 
 # Install GNU core utilities (those that come with OS X are outdated)
-brew install coreutils
-
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, g-prefixed
-brew install findutils
+brew install coreutils findutils
 
 # Install Bash 4
 brew install bash
@@ -19,9 +19,6 @@ brew install bash
 # Install more recent versions of some OS X tools
 brew tap homebrew/dupes
 brew install homebrew/dupes/grep
-
-# Install PHP
-brew tap homebrew/homebrew-php
 
 binaries=(
   webkit2png
@@ -42,23 +39,22 @@ brew tap caskroom/versions
 
 # Apps
 apps=(
-  dropbox
   google-chrome
-  screenflick
   firefox
-  spotify
   flash
   iterm2
   sublime-text3
   atom
-  qlstephen
   vlc
   mplayerx
+  screenflick
+  dropbox
+  spotify
   skype
   transmission
   evernote
-  the-unarchiver
   imageoptim
+  qlstephen
   qlprettypatch
   qlcolorcode
   qlmarkdown

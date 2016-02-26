@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 sudo -v
 
 sudo bash -c 'export TAB=$'"'"'\t'"'"'

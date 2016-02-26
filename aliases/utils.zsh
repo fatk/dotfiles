@@ -62,3 +62,6 @@ fi
 
 # Pipe my public key to my clipboard.
 alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"
+
+# Convert flac to mp3
+alias flac2mp3='for f in *.flac; do flac -cd "$f" | lame -h -b 320 - "${f%.*}".mp3; done'

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Check for homebrew
 if test ! $(which brew); then
   echo "Installing homebrew..."
@@ -7,17 +9,23 @@ fi
 # Update homebrew recipes
 brew update
 
-extras=(
-    phpmyadmin
-)
+echo -n "Tapping into homebrew/dupes"
+brew tap homebrew/dupes
 
-echo "Installing extras..."
-brew install ${extras[@]}
+echo -n "Tapping into homebrew/versions"
+brew tap homebrew/versions
 
-echo "Installing cask..."
+echo -n "Tapping into homebrew/homebrew-php"
+brew tap homebrew/homebrew-php
+
+echo -n "Installing PHP"
+brew install php70
+
+
+echo -n "Installing cask..."
 brew install caskroom/cask/brew-cask
 
-echo "Tapping into caskroom/versions"
+echo -n "Tapping into caskroom/versions"
 brew tap caskroom/versions
 
 # Apps
@@ -26,18 +34,18 @@ apps=(
   flux
   plug
   torbrowser
-  trim-enabler
   vyprvpn
   macs-fan-control
 )
 
 # Install apps to /Applications
 # Default is: /Users/$user/Applications
-echo "installing apps..."
+echo -n "Installing apps..."
 brew cask install --appdir="/Applications" ${apps[@]}
 
 # NPM packages
 packages=(
+  node-gyp
   peerflix
   pageres
   tmi
@@ -50,5 +58,5 @@ packages=(
   csslint
 )
 
-echo "installing npm extra packages..."
+echo -n "Installing npm extra packages..."
 npm install -g ${packages[@]}

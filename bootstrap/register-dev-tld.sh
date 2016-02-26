@@ -1,5 +1,5 @@
+#!/usr/bin/env bash
 # This script will install dnsmasq and redirect *.dev to localhost
-
 sudo -v
 
 # Update your homebrew installation
