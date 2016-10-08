@@ -25,10 +25,7 @@ brew tap homebrew/dupes
 brew install homebrew/dupes/grep
 
 binaries=(
-  webkit2png
   trash
-  node
-  hub
   grc
 )
 
@@ -45,7 +42,6 @@ brew tap caskroom/versions
 apps=(
   google-chrome
   firefox
-  flash
   iterm2
   sublime-text3
   atom
